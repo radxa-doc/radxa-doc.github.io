@@ -11,3 +11,9 @@
 `LINUX_DEFCONFIG` Specify the defconfig used for building. Default to `defconfig`.
 
 `SUPPORTED_BOARDS` Specify the supported boards list, which is comma separated without space. This is likely to be changed in the future to use a virtual package instead.
+
+## `kconfig.conf`
+
+`kconfig.conf` is a kernel configuration file. This file should mirrors `defconfig` format.
+
+Currently supported setting: `CONFIG_SAMPLE=[ynm]` or `# CONFIG_SAMPLE is not set`.
