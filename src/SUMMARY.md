@@ -5,7 +5,8 @@
 ---
 
 # Quick Start Guide
-- [Getting Started]()
+- [Getting Started](gettingStarted.md)
+  - [ROCK 3A](3A.md)
   - [ROCK 5B]()
 - [Download System Image]()
 - [Install System to microSD]()
