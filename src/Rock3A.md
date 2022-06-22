@@ -92,17 +92,19 @@ The ROCK 3 will automatically configure the network for your surfing on the Inte
  `$ sudo dhclient eth0`
 
  ### WIFI
- ROCK 3 Model A doesn't come with on board WiFi/BT. Currently the following WiFi Cards are tested and supported by the ROCK 3 Model A.
- | Model                      | Chip       | WiFi              | BT  | Others       |
- | -------------------------- | ---------- | ----------------- | --- | ------------ |
- | ROCK Pi Wireless Module A1 | BCM43436B0 | 2.4G, 36Mbps      | 4.2 |              |
- | ROCK Pi Wireless Module A2 | BCM43456   | 2.4G&5G, 200Mbps  | 5.0 |              |
- | ROCK Pi Wireless Module A3 | BCM43598   | 2.4G&5G, >400Mbps | 5.0 | Support RSDB |
- | ROCK Pi Wireless Module A6 | BCM43752   | 2.4G&5G, WiFi 6   | 5.0 |              |
- | Realtek RTL8723BE          | RTL8723BE  | 2.4G              | 4.0 |              |
- | Realtek RTL8822CE          | RTL8822CE  | 2.4G&5G           | 5.0 |              |
- | Intel 0MHK36               | Intel 3165 | 2.4G&5G           | 4.2 |              |
- | Intel 7265NGW              | Intel 7265 | 2.4G&5G           | 4.2 |              |
+ ROCK 3 Model A doesn't come with on board WiFi/BT. Currently the following WiFi Cards are tested and supported by the ROCK 3 Model A.  
+
+| Model                      | Chip       | WiFi              | BT  | Others       |
+| -------------------------- | ---------- | ----------------- | --- | ------------ |
+| ROCK Pi Wireless Module A1 | BCM43436B0 | 2.4G, 36Mbps      | 4.2 |              |
+| ROCK Pi Wireless Module A2 | BCM43456   | 2.4G&5G, 200Mbps  | 5.0 |              |
+| ROCK Pi Wireless Module A3 | BCM43598   | 2.4G&5G, >400Mbps | 5.0 | Support RSDB |
+| ROCK Pi Wireless Module A6 | BCM43752   | 2.4G&5G, WiFi 6   | 5.0 |              |
+| Realtek RTL8723BE          | RTL8723BE  | 2.4G              | 4.0 |              |
+| Realtek RTL8822CE          | RTL8822CE  | 2.4G&5G           | 5.0 |              |
+| Intel 0MHK36               | Intel 3165 | 2.4G&5G           | 4.2 |              |
+| Intel 7265NGW              | Intel 7265 | 2.4G&5G           | 4.2 |              |  
+
 
 * More Intel WiFi cards are supported in theory as long as the kernel versions requirements < 4.19 for vendor kernel. The WiFi firmware should be put under '''/lib/firmware''' manually. Check [Intel website](https://www.intel.com/content/www/us/en/support/articles/000005511/wireless.html ) for the WiFi card model and download fw.
 * Check whether your sbc support WIFI either through Hardware or command line. Rock 3A doesn't have wifi module.
