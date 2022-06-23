@@ -14,7 +14,7 @@ Debian/Ubuntu:
 
 ```
 sudo apt update
-sudo apt install -y build-essential git u-boot-tools gcc-aarch64-linux-gnu cpio ruby docker multipath-tools
+sudo apt install -y build-essential git u-boot-tools gcc-aarch64-linux-gnu cpio ruby docker.io multipath-tools
 sudo gem install fpm
 ```
 
