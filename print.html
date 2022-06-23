@@ -534,23 +534,22 @@ README.md           Project readme.
 <p>You can then test your image. Once you are sure your kernel and firmware are up to sniff, create new repos in <code>radxa-pkg</code> organization to automatically generate packages for them (or update the existing one), create new releases, and update <code>radxa-repo/apt</code> to include them in the apt repo. You can then build image without <code>-k</code> and <code>-f</code> options.</p>
 <p>Now you can update <code>radxa-build</code> organization to have the image auto generated over there.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rock-3a-hardware-features"><a class="header" href="#rock-3a-hardware-features">ROCK 3A hardware Features</a></h1>
-<table><thead><tr><th>feature</th><th>description</th></tr></thead><tbody>
-<tr><td>Model</td><td>Rock 3 Model A</td></tr>
+<table><thead><tr><th>Model</th><th>ROCK 3 Model A</th></tr></thead><tbody>
 <tr><td>SoC</td><td>RK3568</td></tr>
-<tr><td>CPU</td><td>Quad-core Cortex-A55, freqency 2Ghz</td></tr>
+<tr><td>CPU</td><td>Quad-core Cortex-A55 up to 2GHz</td></tr>
 <tr><td>GPU</td><td>Mali G52</td></tr>
-<tr><td>NPU</td><td>0.8TOPS NPU</td></tr>
+<tr><td>NPU</td><td>0.8Tops NPU</td></tr>
 <tr><td>Memory</td><td>2/4/8GB LPDDR4 3200MT/s, up to 1560MHz</td></tr>
-<tr><td>Storage</td><td>eMMC <br /> μSD card (μSD slot supports up to 128 GB μSD card) <br /> M.2 SSD (M.2 connector supports up to 8TB M2 NVME SSD)</td></tr>
-<tr><td>Display</td><td>HDMI 2.0 up to 4k*2k@60 <br />MIPI DSI 2 lanes via FPC connector<br />Any two of HDMI, MIPI DSI can work at the same time, support mirror mode or extend mode.</td></tr>
-<tr><td>Audio</td><td>3.5mm jack with mic<br />HD codec that supports up to 24-bit/96KHz audio.</td></tr>
-<tr><td>Camera</td><td>MIPI CSI 2 lanes via FPC connector, support up to 800 MP camera.</td></tr>
-<tr><td>Wirelss</td><td>None. Optional ROCK Pi Wireless Module</td></tr>
-<tr><td>USB</td><td>USB 3.0 OTG X1, hardware switch for host/device switch, front one<br />USB 3.0 HOST X1<br />USB 2.0 HOST X2</td></tr>
-<tr><td>Ethernet</td><td>GbE LAN with Power over Ethernet (PoE) support<br />additional HAT is required for powering from PoE</td></tr>
-<tr><td>IO</td><td>40-pin expansion header<br />5 x UART<br />1 x SPI bus<br />2 x I2C bus<br />6 x PWM<br />1 x ADC<br />1 x CAN<br />6 x GPIO<br />2 x 5V DC power in<br />1 x 3.3V DC power in</td></tr>
-<tr><td>Others</td><td>RTC<br />RTC battery connector for time backup(optional)</td></tr>
-<tr><td>Power</td><td>USB PD, support USB Type C PD 2.0, 9V/2A, 12V/2A, 15V/2A, 20V/2A.<br />Qualcomm® Quick ChargeTM: Supports QC 3.0/2.0 adapter, 9V/2A, 12V/1.5A</td></tr>
+<tr><td>Storage</td><td>eMMC<br /> microSD card up to 128 GB <br /> M.2 NVMe SSD</td></tr>
+<tr><td>Display</td><td>HDMI 2.0 up to 4K60p<br />MIPI DSI 2 lanes via FPC connector<br />Support dual display mode</td></tr>
+<tr><td>Audio</td><td>3.5mm combo jack<br />HD codec that supports up to 24-bit/96KHz audio.</td></tr>
+<tr><td>Camera</td><td>MIPI CSI 2 lanes via FPC connector that supports up to 8MP camera.</td></tr>
+<tr><td>Wirelss</td><td>Optional ROCK Pi Wireless Module</td></tr>
+<tr><td>USB</td><td>USB 3.0 OTG x1<br />USB 3.0 HOST x1<br />USB 2.0 HOST x2</td></tr>
+<tr><td>Ethernet</td><td>GbE LAN with Power over Ethernet (PoE) support (requires additional hardware)</td></tr>
+<tr><td>IO</td><td>40-pin expansion header:<br />5 x UART<br />1 x SPI<br />2 x I2C<br />6 x PWM<br />1 x ADC<br />1 x CAN</td></tr>
+<tr><td>Others</td><td>RTC battery connector</td></tr>
+<tr><td>Power</td><td>Support USB PD 2.0 and Qualcomm® Quick Charge 2.0/3.0 adapter</td></tr>
 <tr><td>Size</td><td>85mm x 56mm</td></tr>
 </tbody></table>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
