@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Quick Start Guide</li><li class="chapter-item expanded "><a href="quick-start/start.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="quick-start/rock-3a.html"><strong aria-hidden="true">1.1.</strong> ROCK 3A</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.</strong> ROCK 5B</div></li></ol></li><li class="chapter-item expanded "><a href="quick-start/download.html"><strong aria-hidden="true">2.</strong> Download System Image</a></li><li class="chapter-item expanded "><a href="quick-start/install-microsd.html"><strong aria-hidden="true">3.</strong> Install System to microSD</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Install System to Alternative Locations</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">RadxaOS</li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Linux User Manual</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="radxaos/serial.html"><strong aria-hidden="true">5.1.</strong> Connect to Serial Console</a></li><li class="chapter-item expanded "><a href="radxaos/ssh.html"><strong aria-hidden="true">5.2.</strong> Enable SSH Access</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> RadxaOS Features</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Set GPIO Header Functions</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Software Development</li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Building System Image</div></li><li class="chapter-item expanded "><a href="software/dev/index.html"><strong aria-hidden="true">8.</strong> Development Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software/dev/ubuild.html"><strong aria-hidden="true">8.1.</strong> ubuild</a></li><li class="chapter-item expanded "><a href="software/dev/lbuild.html"><strong aria-hidden="true">8.2.</strong> lbuild</a></li><li class="chapter-item expanded "><a href="software/dev/rbuild.html"><strong aria-hidden="true">8.3.</strong> rbuild</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Radxa Hardware</li><li class="chapter-item expanded "><a href="hardware/rock-3a.html"><strong aria-hidden="true">9.</strong> ROCK 3A</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> ROCK 5B</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributions.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Quick Start Guide</li><li class="chapter-item expanded "><a href="quick-start/start.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="quick-start/rock-3a.html"><strong aria-hidden="true">1.1.</strong> ROCK 3A</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.2.</strong> ROCK 5B</div></li></ol></li><li class="chapter-item expanded "><a href="quick-start/download.html"><strong aria-hidden="true">2.</strong> Download System Image</a></li><li class="chapter-item expanded "><a href="quick-start/install-microsd.html"><strong aria-hidden="true">3.</strong> Install System to microSD</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Install System to Alternative Locations</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">RadxaOS</li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Linux User Manual</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="radxaos/serial.html"><strong aria-hidden="true">5.1.</strong> Connect to Serial Console</a></li><li class="chapter-item expanded "><a href="radxaos/ssh.html"><strong aria-hidden="true">5.2.</strong> Enable SSH Access</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> RadxaOS Features</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Set GPIO Header Functions</div></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Software Development</li><li class="chapter-item expanded "><a href="software/build.html"><strong aria-hidden="true">7.</strong> Building System Image</a></li><li class="chapter-item expanded "><a href="software/dev/index.html"><strong aria-hidden="true">8.</strong> Development Reference</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="software/dev/ubuild.html"><strong aria-hidden="true">8.1.</strong> ubuild</a></li><li class="chapter-item expanded "><a href="software/dev/lbuild.html"><strong aria-hidden="true">8.2.</strong> lbuild</a></li><li class="chapter-item expanded "><a href="software/dev/rbuild.html"><strong aria-hidden="true">8.3.</strong> rbuild</a></li><li class="spacer"></li></ol></li><li class="chapter-item expanded "><li class="part-title">Radxa Hardware</li><li class="chapter-item expanded "><a href="hardware/rock-3a.html"><strong aria-hidden="true">9.</strong> ROCK 3A</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> ROCK 5B</div></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributions.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -426,10 +426,52 @@ ssh rock@rockpie.local
 ssh rock@ip-of-device
 </code></pre>
 <p>Note: You can also get the IP of ROCK 3A from option 1 if you can not access network administrator page.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="building-system-image"><a class="header" href="#building-system-image">Building System Image</a></h1>
+<p>This documentation serves as a quick guide for building images for supported products. Custom images should refer to each build tool's reference for available options.</p>
+<h2 id="build-with-radxa-kernel-and-firmware"><a class="header" href="#build-with-radxa-kernel-and-firmware">Build with Radxa kernel and firmware</a></h2>
+<p>To get started, please first config your system according to <a href="software/dev/index.html">Development Reference</a>. This one will also include additional dependencies for building kernel and firmware in later steps.</p>
+<p>You can then clone <code>rbuild</code> which is our image generator:</p>
+<pre><code class="language-shell">git clone --depth 1 https://github.com/radxa-repo/rbuild.git
+cd rbuild
+./rbuild
+</code></pre>
+<p>Running <code>rbuild</code> without any argument will display the help message, which lists the supported products, the supported distro, and flavors. You can then build the image with:</p>
+<pre><code class="language-shell">./rbuild &lt;board&gt; [distro] [flavor]
+</code></pre>
+<p><code>distro</code> and <code>flavor</code> are optional arguments. If you omit them, a default value will be used.</p>
+<p>Once the command returns, you can find the built image located in the same folder, along with the SHA-512 hash.</p>
+<h2 id="speed-up-image-generation"><a class="header" href="#speed-up-image-generation">Speed up image generation</a></h2>
+<p>Here are a few tricks to speed up image generation to make your debugging experience easier.</p>
+<ol>
+<li>Update <code>common/rootfs.yaml</code> to use a faster APT mirrors.</li>
+<li>Specify <code>-r</code> option when running <code>rbuild</code>. This will reuse the previously generated rootfs. Useful when you need to do frequent builds.</li>
+<li>Specify <code>--no-compression</code> option when running <code>rbuild</code>. This will skip image compression, so <code>rbuild</code> can end sooner for you to flash the image.</li>
+<li>While not strictly speeding up image generation, you can also specify <code>-s</code> option when running <code>rbuild</code>. This will shrink the image, so the empty space at the end of the image won't be written to the testing media, saving your time on flashing instead of building. This option does carry the caveat of requiring <code>sudo</code> to mount the image, which could block the building process depending on your setting.</li>
+</ol>
+<h2 id="build-kernel-from-source"><a class="header" href="#build-kernel-from-source">Build kernel from source</a></h2>
+<p>Once you are comfortable with <code>rbuild</code>, you can try with <code>lbuild</code> to create custom kernel for your image. Run the following commands to clone <code>lbuild</code> to your system:</p>
+<pre><code class="language-shell">git clone --depth 1 https://github.com/radxa-repo/lbuild.git
+cd lbuild
+./lbuild
+</code></pre>
+<p>Similarly running <code>lbuild</code> without any argument give you the help message. Supported forks are listed here as well. Running <code>./lbuild [fork]</code> to get the build going, and you can find the resulting deb packages in the same folder. The one named <code>linux-images-...</code> is the kernel package.</p>
+<p>However, to integrate kernel into the image, you should first check if the kernel is compatiable with your targeting product. A single kernel can support multiple products, and the list is defined as <code>SUPPORTED_BOARDS</code> in <code>forks/[fork]/fork.conf</code> file.</p>
+<p>Once you have the correct kernel package, you can copy it to <code>rbuild</code> folder, and use <code>-k [linux-images.deb]</code> to specify a local kernel package in <code>rbuild</code>.</p>
+<h2 id="build-firmware-from-source"><a class="header" href="#build-firmware-from-source">Build firmware from source</a></h2>
+<p>In addition to custom kernel, you can also build custom firmware for your image. The most common choice is <a href="https://github.com/u-boot/u-boot">U-Boot</a> but we are also looking to support <a href="https://github.com/tianocore/edk2">EDK2</a> for EFI boot, hence we are calling this section &quot;firmware&quot; instead of the more commonly used &quot;bootloader&quot; in embedded development.</p>
+<p>We have <code>ubuild</code> for building U-Boot, and at this point you should be pretty familiar with this family of tools:</p>
+<pre><code class="language-shell">git clone --depth 1 https://github.com/radxa-repo/ubuild.git
+cd ubuild
+./ubuild
+</code></pre>
+<p>The help message this time will show you the supported products. Unlike the kernel we have one firmware per product. This is to allow each firmware to have the correct hardware configuration coded in, as on ARM platform there is no standardized hardware discovery mechanism.</p>
+<p>Simply running <code>./ubuild [product]</code> to have the U-Boot package built. Copy it to <code>rbuild</code> folder and use <code>-f [u-boot.deb]</code> to specify a local firmware package in <code>rbuild</code>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="development"><a class="header" href="#development">Development</a></h1>
 <h2 id="dependency"><a class="header" href="#dependency">Dependency</a></h2>
 <p>Arch/Manjaro:</p>
-<pre><code>sudo yay -Syu --noconfirm --needed base-devel git uboot-tools aarch64-linux-gnu-gcc cpio dpkg fpm docker multipath-tools
+<pre><code># You need to install `yay` first since `fpm` is availabe in AUR
+# Otherwise install `ruby` and follow Debian guide to install `fpm`
+yay -Syu --noconfirm --needed base-devel git uboot-tools aarch64-linux-gnu-gcc cpio dpkg fpm docker multipath-tools
 </code></pre>
 <p>Debian/Ubuntu:</p>
 <pre><code>sudo apt update
