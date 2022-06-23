@@ -27,7 +27,7 @@
 
 # Software Development
 
-- [Building System Image]()
+- [Building System Image](software/build.md)
 - [Development Reference](software/dev/index.md)
   - [ubuild](software/dev/ubuild.md)
   - [lbuild](software/dev/lbuild.md)
@@ -43,4 +43,3 @@
 ---
 
 [Contributors](contributions.md)
-
