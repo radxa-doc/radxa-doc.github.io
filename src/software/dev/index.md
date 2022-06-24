@@ -12,9 +12,11 @@ yay -Syu --noconfirm --needed base-devel git uboot-tools aarch64-linux-gnu-gcc c
 
 Debian/Ubuntu:
 
+We use `docker` provided from distro's own repository. If you installed `docker` from another source, please remove `docker.io` from `apt install` command.
+
 ```
 sudo apt update
-sudo apt install -y build-essential git u-boot-tools gcc-aarch64-linux-gnu cpio ruby docker.io multipath-tools
+sudo apt install -y build-essential bison flex libssl-dev python-is-python3 git u-boot-tools gcc-aarch64-linux-gnu cpio ruby multipath-tools docker.io
 sudo gem install fpm
 ```
 
