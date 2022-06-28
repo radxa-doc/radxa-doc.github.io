@@ -154,7 +154,7 @@ sudo apt install -y build-essential bison flex libssl-dev python-is-python3 git 
 sudo gem install fpm
 </code></pre>
 <h2 id="additional-system-config"><a class="header" href="#additional-system-config">Additional system config</a></h2>
-<pre><code>sudo usermod -a -G docker $UID
+<pre><code>sudo usermod -a -G docker $USER
 sudo systemctl enable docker
 sudo reboot
 </code></pre>
