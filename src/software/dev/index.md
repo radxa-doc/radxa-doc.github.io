@@ -23,7 +23,7 @@ sudo gem install fpm
 ## Additional system config
 
 ```
-sudo usermod -a -G docker $UID
+sudo usermod -a -G docker $USER
 sudo systemctl enable docker
 sudo reboot
 ```
