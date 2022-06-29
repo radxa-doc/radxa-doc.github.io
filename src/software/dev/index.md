@@ -16,7 +16,7 @@ We use `docker` provided from distro's own repository. If you installed `docker`
 
 ```
 sudo apt update
-sudo apt install -y build-essential bison flex libssl-dev python-is-python3 git u-boot-tools gcc-aarch64-linux-gnu cpio ruby multipath-tools docker.io
+sudo apt install -y build-essential bison flex libssl-dev python-is-python3 git u-boot-tools gcc-aarch64-linux-gnu gcc-arm-none-eabi cpio ruby multipath-tools docker.io
 sudo gem install fpm
 ```
 

@@ -43,7 +43,7 @@ cd lbuild
 ./lbuild
 ```
 
-Similarly running `lbuild` without any argument give you the help message. Supported forks are listed here as well. Running `./lbuild [fork]` to get the build going, and you can find the resulting deb packages in the same folder. The one named `linux-images-...` is the kernel package.
+Similarly running `lbuild` without any argument give you the help message. Supported forks are listed here as well. Running `./lbuild [fork]` to get the build going, and you can find the resulting deb packages in the same folder. There will be multiple `linux-images-....deb` packages. The one with the longest filename is the real kernel package, others are virtual packages.
 
 However, to integrate kernel into the image, you should first check if the kernel is compatiable with your targeting product. A single kernel can support multiple products, and the list is defined as `SUPPORTED_BOARDS` in `forks/[fork]/fork.conf` file.
 
