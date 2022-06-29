@@ -146,10 +146,9 @@
 <p><code>LINUX_GIT</code> Specify upstream kernel repo.</p>
 <p><code>LINUX_COMMIT</code> or <code>LINUX_BRANCH</code> or <code>LINUX_TAG</code> Specify the exact kernel revision. The first defined option in the listed order will be used.</p>
 <p><code>LINUX_DEFCONFIG</code> Specify the defconfig used for building. Default to <code>defconfig</code>.</p>
-<p><code>SUPPORTED_BOARDS</code> Specify the supported boards list, which is comma separated without space. This is likely to be changed in the future to use a virtual package instead.</p>
+<p><code>SUPPORTED_BOARDS</code> Specify the supported boards list, which is a <a href="https://www.gnu.org/software/bash/manual/html_node/Arrays.html">Bash array</a>.</p>
 <h2 id="kconfigconf"><a class="header" href="#kconfigconf"><code>kconfig.conf</code></a></h2>
-<p><code>kconfig.conf</code> is a kernel configuration file. This file should mirrors <code>defconfig</code> format.</p>
-<p>Currently supported setting: <code>CONFIG_SAMPLE=[ynm]</code> or <code># CONFIG_SAMPLE is not set</code>.</p>
+<p><code>kconfig.conf</code> is a kernel configuration file. This file mirrors <code>defconfig</code> format.</p>
 
                     </main>
 

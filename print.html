@@ -454,7 +454,7 @@ cd rbuild
 cd lbuild
 ./lbuild
 </code></pre>
-<p>Similarly running <code>lbuild</code> without any argument give you the help message. Supported forks are listed here as well. Running <code>./lbuild [fork]</code> to get the build going, and you can find the resulting deb packages in the same folder. The one named <code>linux-images-...</code> is the kernel package.</p>
+<p>Similarly running <code>lbuild</code> without any argument give you the help message. Supported forks are listed here as well. Running <code>./lbuild [fork]</code> to get the build going, and you can find the resulting deb packages in the same folder. There will be multiple <code>linux-images-....deb</code> packages. The one with the longest filename is the real kernel package, others are virtual packages.</p>
 <p>However, to integrate kernel into the image, you should first check if the kernel is compatiable with your targeting product. A single kernel can support multiple products, and the list is defined as <code>SUPPORTED_BOARDS</code> in <code>forks/[fork]/fork.conf</code> file.</p>
 <p>Once you have the correct kernel package, you can copy it to <code>rbuild</code> folder, and use <code>-k [linux-images.deb]</code> to specify a local kernel package in <code>rbuild</code>.</p>
 <h2 id="build-firmware-from-source"><a class="header" href="#build-firmware-from-source">Build firmware from source</a></h2>
@@ -476,7 +476,7 @@ yay -Syu --noconfirm --needed base-devel git uboot-tools aarch64-linux-gnu-gcc c
 <p>Debian/Ubuntu:</p>
 <p>We use <code>docker</code> provided from distro's own repository. If you installed <code>docker</code> from another source, please remove <code>docker.io</code> from <code>apt install</code> command.</p>
 <pre><code>sudo apt update
-sudo apt install -y build-essential bison flex libssl-dev python-is-python3 git u-boot-tools gcc-aarch64-linux-gnu cpio ruby multipath-tools docker.io
+sudo apt install -y build-essential bison flex libssl-dev python-is-python3 git u-boot-tools gcc-aarch64-linux-gnu gcc-arm-none-eabi cpio ruby multipath-tools docker.io
 sudo gem install fpm
 </code></pre>
 <h2 id="additional-system-config"><a class="header" href="#additional-system-config">Additional system config</a></h2>
@@ -491,10 +491,9 @@ sudo reboot
 <p><code>LINUX_GIT</code> Specify upstream kernel repo.</p>
 <p><code>LINUX_COMMIT</code> or <code>LINUX_BRANCH</code> or <code>LINUX_TAG</code> Specify the exact kernel revision. The first defined option in the listed order will be used.</p>
 <p><code>LINUX_DEFCONFIG</code> Specify the defconfig used for building. Default to <code>defconfig</code>.</p>
-<p><code>SUPPORTED_BOARDS</code> Specify the supported boards list, which is comma separated without space. This is likely to be changed in the future to use a virtual package instead.</p>
+<p><code>SUPPORTED_BOARDS</code> Specify the supported boards list, which is a <a href="https://www.gnu.org/software/bash/manual/html_node/Arrays.html">Bash array</a>.</p>
 <h2 id="kconfigconf"><a class="header" href="#kconfigconf"><code>kconfig.conf</code></a></h2>
-<p><code>kconfig.conf</code> is a kernel configuration file. This file should mirrors <code>defconfig</code> format.</p>
-<p>Currently supported setting: <code>CONFIG_SAMPLE=[ynm]</code> or <code># CONFIG_SAMPLE is not set</code>.</p>
+<p><code>kconfig.conf</code> is a kernel configuration file. This file mirrors <code>defconfig</code> format.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="rbuild"><a class="header" href="#rbuild">rbuild</a></h1>
 <h2 id="folder-structure"><a class="header" href="#folder-structure">Folder structure</a></h2>
 <pre><code>.github/            GitHub workflow related files.
