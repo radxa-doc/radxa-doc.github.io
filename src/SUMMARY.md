@@ -32,6 +32,8 @@
   - [ubuild](software/dev/ubuild.md)
   - [lbuild](software/dev/lbuild.md)
   - [rbuild](software/dev/rbuild.md)
+  - [rconfig]()
+  - [pkgbase](software/dev/pkgbase.md)
 
 ---
 
