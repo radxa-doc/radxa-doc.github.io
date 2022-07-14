@@ -168,7 +168,7 @@ cd rbuild
 cd lbuild
 ./lbuild
 </code></pre>
-<p>Similarly running <code>lbuild</code> without any argument give you the help message. Supported forks are listed here as well. Running <code>./lbuild [fork]</code> to get the build going, and you can find the resulting deb packages in the same folder. There will be multiple <code>linux-images-....deb</code> packages. The one with the longest filename is the real kernel package, others are virtual packages.</p>
+<p>Similarly running <code>lbuild</code> without any argument give you the help message. Supported forks are listed here as well. Running <code>./lbuild [fork]</code> to get the build going, and you can find the resulting deb packages in the same folder. There will be multiple <code>linux-images-....deb</code> packages. The one with the lartest size is the real kernel package, others are virtual packages.</p>
 <p>However, to integrate kernel into the image, you should first check if the kernel is compatiable with your targeting product. A single kernel can support multiple products, and the list is defined as <code>SUPPORTED_BOARDS</code> in <code>forks/[fork]/fork.conf</code> file.</p>
 <p>Once you have the correct kernel package, you can copy it to <code>rbuild</code> folder, and use <code>-k [linux-images.deb]</code> to specify a local kernel package in <code>rbuild</code>.</p>
 <h2 id="build-firmware-from-source"><a class="header" href="#build-firmware-from-source">Build firmware from source</a></h2>
