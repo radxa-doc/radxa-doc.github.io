@@ -24,28 +24,21 @@ Running `rbuild` without any argument will display the help message, which lists
 
 Once the command returns, you can find the built image located in the same folder, along with the SHA-512 hash.
 
-## Speed up image generation
-
-Here are a few tricks to speed up image generation to make your debugging experience easier.
-
-1. Update `common/rootfs.yaml` to use a faster APT mirrors.
-2. Specify `-r` option when running `rbuild`. This will reuse the previously generated rootfs. Useful when you need to do frequent builds.
-3. Specify `--no-compression` option when running `rbuild`. This will skip image compression, so `rbuild` can end sooner for you to flash the image.
-4. While not strictly speeding up image generation, you can also specify `-s` option when running `rbuild`. This will shrink the image, so the empty space at the end of the image won't be written to the testing media, saving your time on flashing instead of building. This option does carry the caveat of requiring `sudo` to mount the image, which could block the building process depending on your setting.
+To speed up image generation to make your debugging experience easier, you can update `common/rootfs.yaml` to use a faster APT mirrors.
 
 ## Build kernel from source
 
-Once you are comfortable with `rbuild`, you can try with `lbuild` to create custom kernel for your image. Run the following commands to clone `lbuild` to your system:
+Once you are comfortable with `rbuild`, you can try with `bsp` to create custom kernel for your image. Run the following commands to clone `bsp` to your system:
 
 ```shell
-git clone --depth 1 https://github.com/radxa-repo/lbuild.git
-cd lbuild
-./lbuild
+git clone --depth 1 https://github.com/radxa-repo/bsp.git
+cd bsp
+./bsp
 ```
 
-Similarly running `lbuild` without any argument give you the help message. Supported forks are listed here as well. Running `./lbuild [fork]` to get the build going, and you can find the resulting deb packages in the same folder. There will be multiple `linux-images-....deb` packages. The one with the lartest size is the real kernel package, others are virtual packages.
+Similarly running `bsp` without any argument give you the help message. Supported forks are listed here as well. Running `./bsp linux [fork]` to get the build going, and you can find the resulting deb packages in the same folder. There will be multiple `linux-images-....deb` packages. The one with the largest size is the real kernel package, others are virtual packages.
 
-However, to integrate kernel into the image, you should first check if the kernel is compatiable with your targeting product. A single kernel can support multiple products, and the list is defined as `SUPPORTED_BOARDS` in `forks/[fork]/fork.conf` file.
+However, to integrate kernel into the image, you should first check if the kernel is compatiable with your targeting product. A single kernel can support multiple products, and the list is defined as `SUPPORTED_BOARDS` in `linux/[fork]/fork.conf` file.
 
 Once you have the correct kernel package, you can copy it to `rbuild` folder, and use `-k [linux-images.deb]` to specify a local kernel package in `rbuild`.
 
@@ -53,14 +46,14 @@ Once you have the correct kernel package, you can copy it to `rbuild` folder, an
 
 In addition to custom kernel, you can also build custom firmware for your image. The most common choice is [U-Boot](https://github.com/u-boot/u-boot) but we are also looking to support [EDK2](https://github.com/tianocore/edk2) for EFI boot, hence we are calling this section "firmware" instead of the more commonly used "bootloader" in embedded development.
 
-We have `ubuild` for building U-Boot, and at this point you should be pretty familiar with this family of tools:
+`bsp` supports building U-Boot package as well. Unlike the kernel, we have one firmware per product. This is to allow each firmware to have the correct hardware configuration coded in, as on ARM platform there is no standardized hardware discovery mechanism.
 
-```shell
-git clone --depth 1 https://github.com/radxa-repo/ubuild.git
-cd ubuild
-./ubuild
-```
+Simply running `./bsp u-boot [fork]` to have the U-Boot package built. Copy it to `rbuild` folder and use `-f [u-boot.deb]` to specify a local firmware package in `rbuild`.
 
-The help message this time will show you the supported products. Unlike the kernel we have one firmware per product. This is to allow each firmware to have the correct hardware configuration coded in, as on ARM platform there is no standardized hardware discovery mechanism.
+You can also run `./bsp u-boot [fork] [product]` to build firmware for a single product. By default all products supported by the same code fork will be built and packaged together.
 
-Simply running `./ubuild [product]` to have the U-Boot package built. Copy it to `rbuild` folder and use `-f [u-boot.deb]` to specify a local firmware package in `rbuild`.
+## Flash image
+
+You can use `sudo ./rbuild --write-image xxx.img /dev/sdX` to write an image to a block device. The command support raw image (.img) and gz/xz/zip compressed files.
+
+In addition you can also specify `-s` option, which will shrink rootfs before writting the image. This only works for raw image file type.

@@ -29,11 +29,11 @@
 
 - [Building System Image](software/build.md)
 - [Development Reference](software/dev/index.md)
-  - [ubuild](software/dev/ubuild.md)
-  - [lbuild](software/dev/lbuild.md)
+  - [bsp](software/dev/bsp.md)
   - [rbuild](software/dev/rbuild.md)
-  - [rconfig]()
+  - [rsetup]()
   - [pkgbase](software/dev/pkgbase.md)
+  - [apt](software/dev/apt.md)
 
 ---
 
